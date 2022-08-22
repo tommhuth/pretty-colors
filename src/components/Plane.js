@@ -134,8 +134,8 @@ export default function Plane() {
         }
     }) 
 
-    useFrame(() => {
-        uniforms.uTime.value += .002
+    useFrame((stat, delta) => {
+        uniforms.uTime.value += .12 * delta
         uniforms.uTime.needsUpdate = true  
     })
 
